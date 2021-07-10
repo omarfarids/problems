@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main(){
+    float owed;
+    do{
+    printf("change owed :");
+    scanf("%f",&owed);
+    }
+    while(owed<=0);
+    int coins=0;
+    while(owed>=0.25){
+        coins++;
+        owed -= 0.25;
+    }
+    while(owed>=0.10){
+        coins++;
+        owed -= 0.10;
+    }
+    while(owed>=0.05){
+        coins++;
+        owed -= 0.05;
+    }
+    while(owed>=0.01){
+        coins++;
+        owed -= 0.01;
+    }
+    printf("%d",coins);
+}
